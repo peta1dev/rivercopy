@@ -2,40 +2,40 @@
 
 <html>
   <head>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&family=Ovo&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
   </head>
 
   <body>
     <header>
       <nav>
         <ul>
-          <li>Mission</li>
-          <li>Services</li>
-          <li>Wordsmiths</li>
-          <li>Contact</li>
+          <li><a href="#mission">mission</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#wordsmiths">wordsmiths</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
-      <section>
-        <div class="socials">
-          <div>FB</div>
-          <div>Insta</div>
-          <div>Youtube</div>
-          <div>Twitter</div>
-        </div>
-      </section>
     </header>
     
     <main>
-      <h1>River Copy</h1>  
-      <h2>Copywriting Services</h2>
-        
-        <section>
+      <div class="splash">
+        <h1>river copy</h1>  
+        <h2>Copywriting Services</h2>
+
+     </div>
+
+        <section id="mission">
           <h3>Mission statement</h3>  
-          <div class="mission">
+          <div class="mission-intro">
+            Through minimalism we connect speakers and audiences through their core values 
           </div>
         </section>
         
-        <section>
+        <section id="services">
           <h3>Services</h3>         
            <div class="services">
              <div></div>
@@ -44,7 +44,7 @@
            </div>
         </section>
   
-        <section>
+        <section id="wordsmiths">
           <h3>Wordsmiths</h3>
           <div class="wordsmiths">
             <div></div>
@@ -55,14 +55,16 @@
     </main>
     
     <footer>
-      <section>
+      <section id="contact">
         <h3>Contact</h3>
         <div class="contact">
           <div>Email</div>
-          <div>FB</div>
-          <div>Insta</div>
-          <div>Youtube</div>
-          <div>Twitter</div>
+          <div class="socials">
+            <div><img src="images/f_logo_RGB-Black_58.png" /></div>
+            <div><img src="images/Instagram_Glyph_Black.png" /></div>
+            <div><img src="images/yt_icon_mono_light.png" /></div>
+            <div><img src="images/2021 Twitter logo - black.png" /></div>
+          </div>
         </div>  
       </section>
     </footer>
