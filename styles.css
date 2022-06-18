@@ -1,5 +1,7 @@
 body {
-    font-family: 'Ovo', serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: white;
+    color: black;
 }
 
 nav {
@@ -26,7 +28,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: black;
+
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
     Font-size: 1.2rem;
@@ -41,13 +43,27 @@ main, footer {
     top: 4.0625rem;
 }
 
+.splash {
+    background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255, 1)), url('images/luca-bravo-ESkw2ayO2As-unsplash.jpg');
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+.credit {
+    font-size: .5rem;
+    text-align: right;
+    padding-right: 5%;
+}
+
 h1 {
+    font-family: 'Ovo', serif;
     font-size: 6rem;
     padding: 2rem 0 1rem 0;
     text-align: center;
 }
 
 h2 {
+    font-family: 'Ovo', serif;
     font-size: 2.5rem;
     text-align: center;
     padding-left: 4rem;
@@ -55,15 +71,36 @@ h2 {
     
 }
 
+.readers-only {
+    display: none;
+}
+
 h3 {
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 1rem;
     padding: 5rem 0 2rem 0;
 
 }
 
+.splash H1 {
+
+}
+
+.splash img {
+    display:block;
+    margin: auto;
+    padding-top: 2rem;
+    height: 25vh;
+}
+
 .mission-intro {
-    padding-left: 5em;
+    font-family: 'Ovo', serif;
+    text-align: center;
     font-size: 2em;
     font-weight: 100;
+    padding: 3rem 0 2rem 0;
+}
+
+.wordsmiths img {
+    height: 100px;
 }
