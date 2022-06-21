@@ -1,12 +1,15 @@
 body {
-    font-family: 'Nanum Gothic', sans-serif;
+    
     background-color: white;
     color: black;
+    font-family: 'Mukta', sans-serif;
+    
+
 }
 
 nav {
     position: fixed;
-    z-index: 2;
+    z-index: 2;             
     width: 100%;
     border-bottom: solid 1px black;
     background-color: white;
@@ -28,8 +31,9 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-
-    font-family: 'Nanum Gothic', sans-serif;
+    color: darkgreen;
+   
+    
     font-weight: 700;
     Font-size: 1.2rem;
 }
@@ -45,25 +49,23 @@ main, footer {
 
 .splash {
     background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255, 1)), url('images/luca-bravo-ESkw2ayO2As-unsplash.jpg');
+    /* filter: grayscale(75%); */
     background-size: cover;
     background-position-y: bottom;
 }
 
-.credit {
-    font-size: .5rem;
-    text-align: right;
-    padding-right: 5%;
-}
+
 
 h1 {
-    font-family: 'Ovo', serif;
+    font-family: 'Source Serif Pro', serif;
     font-size: 6rem;
     padding: 2rem 0 1rem 0;
     text-align: center;
 }
 
 h2 {
-    font-family: 'Ovo', serif;
+    
+    font-family: 'Source Serif Pro', serif;
     font-size: 2.5rem;
     text-align: center;
     padding-left: 4rem;
@@ -76,13 +78,13 @@ h2 {
 }
 
 h3 {
-    font-weight: 400;
-    font-size: 1rem;
-    padding: 5rem 0 2rem 0;
-
-}
-
-.splash H1 {
+    text-transform: lowercase;
+    padding: 1rem 0 1rem 0;
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 1rem;
 
 }
 
@@ -94,13 +96,148 @@ h3 {
 }
 
 .mission-intro {
-    font-family: 'Ovo', serif;
     text-align: center;
     font-size: 2em;
     font-weight: 100;
     padding: 3rem 0 2rem 0;
 }
 
-.wordsmiths img {
-    height: 100px;
+.services {
+  margin: 0 1rem 0 1rem;  
+  display: flex;
+  padding-top: 1rem;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
 }
+
+.services>div {
+  height: 20vh;
+  max-width: 20%;
+  min-width: 260px;
+}
+
+.services-text {
+    background: rgba(255,255,255, .8);
+    color: darkgreen;
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align:center;
+}    
+
+#seo {
+  background-image: url("images/seo.jpg");
+  background-size: cover;
+}
+
+#newsletter {
+    background-image: url("images/newsletter.jpg"); 
+    background-size: cover;
+}
+
+#blog {
+    background-image: url("images/blog.jpg"); 
+    background-size: cover;
+}
+
+#content {
+    background-image: url("images/websitecontent.jpg"); 
+    background-size: cover;
+}
+
+
+
+.wordsmiths {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+
+.smith {
+    padding: 0rem 2rem 0rem 2rem;
+
+    }
+
+
+.smith img {
+    height: 30vh;
+    filter: grayscale(100%);
+    box-shadow:
+        inset 0 -3rem 3rem rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3rem 0.3rem 1rem rgba(0,0,0,0.3);
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    height: 4rem;
+ 
+}
+
+.email {
+    text-transform: lowercase;
+    text-decoration: none;
+    color: darkgreen;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    
+}
+
+.email img {
+    width: 2.5rem;
+    display: inline;
+    padding-right: .5rem;
+}
+
+
+#contact h3 {
+  padding-bottom: 0;
+}
+
+.socials div {
+    padding: 0rem .5rem 0 .5rem;
+    
+}
+
+.credits-title {
+    border-top: 1px solid black;
+    padding-top: 1rem;
+}
+
+.credit {
+    font-size: .75rem;
+    margin-left: 1rem;
+    padding-right: 2.5 rem;
+    color: black;
+}
+
+.credit a {
+    color:black;
+}
+
+.credit a:visited {
+    color:black;
+}
+
+.email-credit {
+        font-size: 1rem;
+        color: black;
+        margin-left: 1rem;
+    }
+    
+    .email-credit a {
+        color:black;
+    }
+    
+    .email-credit a:visited {
+        color:black;
+    }
+    
+
+
+  
