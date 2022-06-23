@@ -78,14 +78,13 @@ h2 {
 }
 
 h3 {
-    text-transform: lowercase;
-    padding: 1rem 0 1rem 0;
-    text-decoration: none;
-    color: darkgreen;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-left: 1rem;
 
+   
+    padding: 1rem 0 1rem 0;
+    color: black;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 1rem;
 }
 
 .splash img {
@@ -112,18 +111,42 @@ h3 {
 }
 
 .services>div {
-  height: 20vh;
-  max-width: 20%;
+  height: 25vh;  
+  width:400px;
   min-width: 260px;
+  border-radius: 10px;
+  margin-top: 20px;
+
+}
+
+@media screen and (max-width: 432px) {
+    .services>div {
+        height: 25vh;  
+        width:100%;
+        min-width: 260px;
+     
+      }
+
 }
 
 .services-text {
-    background: rgba(255,255,255, .8);
-    color: darkgreen;
+    background: rgba(255,255,255, .9);
+    color: black;
     font-size: 2rem;
-    margin-top: 1rem;
-    text-align:center;
+    margin: 2rem 2rem 0rem 2rem;
+    text-align:left;
+    padding-left: 1rem;
+    border-radius: 10px 10px 0px 0px;
 }    
+
+.services-description {
+    border-radius: 0px 0px 10px 10px;
+    padding: 1rem 1rem 1rem 1rem;
+    
+    background: rgba(255,255,255, .9);
+    font-size: 1.2rem;
+    margin: 0rem 2rem 1rem 2rem;
+}
 
 #seo {
   background-image: url("images/seo.jpg");
@@ -152,6 +175,7 @@ h3 {
     justify-content:center;
     flex-wrap: wrap;
     padding-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .smith {
@@ -175,8 +199,9 @@ h3 {
     align-items: center;
     padding: 0 2rem 0 2rem;
     height: 4rem;
- 
+    flex-wrap: wrap;
 }
+
 
 .email {
     text-transform: lowercase;
@@ -194,9 +219,17 @@ h3 {
     padding-right: .5rem;
 }
 
+.social-media-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    height: 4rem;
+ 
+}
 
 #contact h3 {
-  padding-bottom: 0;
+
 }
 
 .socials div {
@@ -204,9 +237,21 @@ h3 {
     
 }
 
+@media only screen and (max-width: 550px) {
+    .socials {
+        justify-content: center;
+        padding: 1rem 2rem 2rem 2rem;
+    }
+
+    .email {
+        justify-content: center;
+    }
+}
+
 .credits-title {
     border-top: 1px solid black;
     padding-top: 1rem;
+    background-color: white;
 }
 
 .credit {
