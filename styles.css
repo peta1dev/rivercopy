@@ -6,22 +6,29 @@ body {
     background-color: white;
     color: black;
     font-family: 'Mukta', sans-serif;
-
 }
 
-.clickable {
+.clickable, .smclickable{
    transition: all .5s ease-out;
 }
 
 .clickable:hover, .clickable:focus {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     transition-duration: .5s;
 }
 
-.clickable:active {
+.smclickable:hover, .smclickable:focus {
+    font-size: 1.05rem;
+    transition-duration: .5s;
+}
+
+.clickable:active, .smclickable:active{
     color: white;
     transition:none;
 }
+
+
+ 
 
 .hidden {
     /*display: none;*/
@@ -47,16 +54,18 @@ nav ul {
 
 nav ul li {
     padding: 0 .5rem;
+    width: 25%;
+    text-align: center;
 }
 
 nav a {
     text-decoration: none;
     color: darkgreen;
-   
-    
     font-weight: 700;
     Font-size: 1.2rem;
 }
+
+
 
 .socials img {
     width: 2.5rem;
@@ -98,10 +107,10 @@ h2 {
 }
 
 h3 {
+    
     overflow:hidden;
     text-align:left;
-    margin: 2rem 2rem 3rem 4rem;
-    
+    margin: 3rem 2rem 3rem 4rem;
     color: black;
     font-weight: 700;
     font-size: 1.5rem;
@@ -114,12 +123,22 @@ h3 > span {
     margin-left: 2rem;
 }
 
-h3 > span:before, h3 > span:after {
+h3 > span:before {
     content: '';
     position: absolute;
     top: 50%;
     border-bottom: 2px solid;
     width: 100vw;
+    margin: 0rem 1.5rem;
+}
+
+
+h3 > span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 100%;
     margin: 0rem 1.5rem;
 }
 
@@ -148,7 +167,7 @@ h3 > span:after {
     text-align: center;
     font-size: 2em;
     font-weight: 100;
-    padding: 3rem 0 2rem 0;
+    padding: 3rem 0 0rem 0;
 }
 
 .services {
@@ -157,7 +176,7 @@ h3 > span:after {
   
   justify-content:space-around;
   flex-wrap: wrap;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .services>div {
@@ -294,13 +313,18 @@ h3 > span:after {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    
 }
 
 .email img {
     width: 2.5rem;
     display: inline;
     padding-right: .5rem;
+}
+
+.email a {
+    align-items: center;
+    text-decoration: none;
+
 }
 
 .social-media-icons {
