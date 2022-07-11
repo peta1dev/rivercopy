@@ -1,11 +1,12 @@
 :root {
-    --photo-height: 30vh;
+--photo-height: 30vh;
 }
 body {
     
     background-color: white;
     color: black;
     font-family: 'Mukta', sans-serif;
+
 }
 
 .clickable, .smclickable{
@@ -13,25 +14,33 @@ body {
 }
 
 .clickable:hover, .clickable:focus {
-    font-size: 1.3rem;
+/*    font-size: 1.3rem; */
+color: darkgreen;
     transition-duration: .5s;
 }
 
 .smclickable:hover, .smclickable:focus {
-    font-size: 1.05rem;
+/*    font-size: 1.05rem; */
+color: darkgreen;
     transition-duration: .5s;
 }
 
 .clickable:active, .smclickable:active{
-    color: white;
+    color: gray;
     transition:none;
 }
 
+.click-button:hover, .click-button:focus {
+    /* background: rgba(0,100,0, .1); */
+    filter: opacity(80%);
+    filter: drop-shadow(2px 2px 15px rgb(60,100,60));
+    transition-duration: .5s;
+}
 
- 
-
-.hidden {
-    /*display: none;*/
+.click-button:active {
+    background: rgba(0,100,0, .9);
+    filter: opacity(10%);
+    transition:none;
 }
 
 nav {
@@ -40,6 +49,7 @@ nav {
     width: 100%;
     border-bottom: solid 1px black;
     background-color: white;
+    min-width: 360px;
 }
 
 nav ul {
@@ -60,7 +70,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: darkgreen;
+    color: gray;
     font-weight: 700;
     Font-size: 1.2rem;
 }
@@ -74,6 +84,7 @@ nav a {
 main, footer {
     position: relative;
     top: 4.0625rem;
+    min-width: 360px;
 }
 
 .splash {
@@ -163,11 +174,53 @@ h3 > span:after {
     height: 25vh;
 }
 
+.notice {    
+    overflow:hidden;
+    text-align:center;
+    margin: 2rem 1rem 2rem 1rem;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+  
+}
+
+.notice-text {
+    background: rgba(255,255,255, .9);
+    color: black;
+    font-size: 2rem;
+    margin: 7rem 4rem 2rem 4rem;
+    padding: 1rem;
+    text-align:center;
+    
+    border-radius: 10px 10px 10px 10px;   
+}    
+
+.backlink {
+    margin: 0 1rem 0 1rem;  
+    display: flex;
+    justify-content:center;
+    padding-bottom: 1rem;
+    text-decoration: none;
+  }
+
+  .backlink>div {
+    height: 25vh;  
+    width:400px;
+    min-width: 16.25rem;
+    min-height: 20rem;
+    border-radius: 10px;
+    margin-top: 20px;
+  
+  }
+
 .mission-intro {
     text-align: center;
     font-size: 2em;
     font-weight: 100;
     padding: 3rem 0 0rem 0;
+}
+.move-anchor-up {
+    scroll-margin-top: 4.0625rem;
 }
 
 .services {
@@ -179,13 +232,14 @@ h3 > span:after {
   padding-bottom: 1rem;
 }
 
-.services>div {
+.services>a, .services>div{
   height: 25vh;  
   width:400px;
   min-width: 16.25rem;
   min-height: 20rem;
   border-radius: 10px;
   margin-top: 20px;
+  text-decoration:none;
 
 }
 
@@ -212,7 +266,7 @@ h3 > span:after {
 .services-description {
     border-radius: 0px 0px 10px 10px;
     padding: 1rem 1rem 1rem 1rem;
-
+    color: black;
     background: rgba(255,255,255, .9);
     font-size: 1.2rem;
     margin: 0rem 2rem 1rem 2rem;
@@ -239,6 +293,10 @@ h3 > span:after {
     background-size: cover;
 }
 
+#backlink {
+    background-image: url("images/websitecontent.jpg"); 
+    background-size: cover;
+}
 
 .wordsmiths {
     display: flex;
@@ -308,8 +366,6 @@ h3 > span:after {
 
 .email {
     text-transform: lowercase;
-    text-decoration: none;
-    color: darkgreen;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -324,6 +380,7 @@ h3 > span:after {
 .email a {
     align-items: center;
     text-decoration: none;
+    color:gray;
 
 }
 
@@ -334,6 +391,15 @@ h3 > span:after {
     padding: 0 2rem 0 2rem;
     height: 4rem;
  
+}
+
+.click-icon:hover, .click-icon:focus {
+    border-bottom: solid 2px black;
+    transition-duration: .5s;
+}
+
+.click-icon:active {
+    border-bottom: none;
 }
 
 .socials div {
@@ -363,6 +429,7 @@ h3 > span:after {
 
 .credit a {
     color:black;
+ 
 }
 
 .credit a:visited {
