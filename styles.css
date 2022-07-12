@@ -1,36 +1,38 @@
 :root {
 --photo-height: 30vh;
 }
-body {
-    
+
+body {    
     background-color: white;
     color: black;
     font-family: 'Mukta', sans-serif;
-
 }
+
+/* ------------------------------------------------------------------------- */
+/* Styles to show clickability */
 
 .clickable, .smclickable{
    transition: all .5s ease-out;
 }
 
-.clickable:hover, .clickable:focus {
+.clickable:hover, .clickable:focus { /* Used for nav bar items */
 /*    font-size: 1.3rem; */
 color: darkgreen;
     transition-duration: .5s;
 }
 
-.smclickable:hover, .smclickable:focus {
+.smclickable:hover, .smclickable:focus { /* Used for email link */
 /*    font-size: 1.05rem; */
 color: darkgreen;
     transition-duration: .5s;
 }
 
-.clickable:active, .smclickable:active{
+.clickable:active, .smclickable:active{  /* Used for nav bar items */
     color: gray;
     transition:none;
 }
 
-.click-button:hover, .click-button:focus {
+.click-button:hover, .click-button:focus { /* Used for panels/large buttons that contain background image and foreground text */
     /* background: rgba(0,100,0, .1); */
     filter: opacity(80%);
     filter: drop-shadow(2px 2px 15px rgb(60,100,60));
@@ -43,6 +45,8 @@ color: darkgreen;
     transition:none;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Nav bar styles */
 nav {
     position: fixed;
     z-index: 2;             
@@ -75,27 +79,24 @@ nav a {
     Font-size: 1.2rem;
 }
 
-
-
-.socials img {
-    width: 2.5rem;
-}
-
+/* ------------------------------------------------------------------------- */
+/* Puts the main and footer sections lower to make room for the sticky nav bar at the top of the page */
 main, footer {
     position: relative;
     top: 4.0625rem;
     min-width: 360px;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Title splash image */
 .splash {
     background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255, 1)), url('images/luca-bravo-ESkw2ayO2As-unsplash.jpg');
-    /* filter: grayscale(75%); */
     background-size: cover;
     background-position-y: bottom;
 }
 
-
-
+/* ------------------------------------------------------------------------- */
+/* Headings styles */
 h1 {
     font-family: 'Source Serif Pro', serif;
     font-size: 6rem;
@@ -110,25 +111,22 @@ h2 {
     text-align: center;
     padding-left: 4rem;
     color:darkgray;
-    
 }
 
-.readers-only {
+.readers-only {  /* Hides the Mission Statement heading but reads out the heading for visually impaired readers */
     display: none;
 }
 
-h3 {
-    
+h3 {    
     overflow:hidden;
     text-align:left;
     margin: 3rem 2rem 3rem 4rem;
     color: black;
     font-weight: 700;
     font-size: 1.5rem;
-  
 }
 
-h3 > span {
+h3 > span { /* Adds an emphasis line prior to each H3 title if the title is emcompassed by a span tag inside the h3 tag */
     position: absolute;
     display: inline-block;
     margin-left: 2rem;
@@ -143,45 +141,254 @@ h3 > span:before {
     margin: 0rem 1.5rem;
 }
 
-
-/* h3 > span:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    border-bottom: 2px solid;
-    width: 100%;
-    margin: 0rem 1.5rem;
-}
-*/
 h3 > span:before {
     right: 100%;
 }
-/*
-h3 > span:after {
-    left: 100%;
-}
-*/
+
+/* Reduce size of H3 when screen size is less than 400px wide */
 @media only screen and (max-width: 400px) {
    h3 {
        font-size: 1.2rem;
    }
 }
 
-.splash img {
-    display:block;
-    margin: auto;
-    padding-top: 2rem;
-    height: 25vh;
+/* ------------------------------------------------------------------------- */
+/* Style for mission statement */
+.mission-intro {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 100;
+    padding: 3rem 0 0rem 0;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Changes the anchor location of a target to account for the sticky nav bar */
+.move-anchor-up {
+    scroll-margin-top: 4.0625rem;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Services section styles */
+
+.services { /* Sets the flex container up to let services panels fit screen */
+  margin: 0 1rem 0 1rem;  
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+.services > a { /* Defines the service panels appearance */
+  height: 25vh;  
+  width:400px;
+  min-width: 16.25rem;
+  min-height: 20rem;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-decoration:none;
+}
+
+@media screen and (max-width: 432px) { /* Media rule to change the services panels to fit the text on smaller size screens */
+    .services>div {
+        height: 30vh;  
+        width:100%;
+        min-width: 260px;
+     
+      }
+}
+
+.services-text { /* Sets the text box style inside the service panel for the panel's service heading */
+    background: rgba(255,255,255, .9);
+    color: black;
+    font-size: 2rem;
+    margin: 2rem 2rem 0rem 2rem;
+    text-align:left;
+    padding-left: 1rem;
+    border-radius: 10px 10px 0px 0px;   
+}    
+
+.services-description { /* Sets the text box style inside the service panel for the panel's service description text */
+    border-radius: 0px 0px 10px 10px;
+    padding: 1rem 1rem 1rem 1rem;
+    color: black;
+    background: rgba(255,255,255, .9);
+    font-size: 1.2rem;
+    margin: 0rem 2rem 1rem 2rem;
+    overflow:scroll;
+}
+
+#seo { /* Sets the SEO Campaigns panel's background image */
+  background-image: url("images/seo.jpg");
+  background-size: cover;
+}
+
+#newsletter { /* Sets the Newsletter Copy panel's background image */
+    background-image: url("images/newsletter.jpg"); 
+    background-size: cover;
+}
+
+#blog { /* Sets the Blog Writing panel's background image */
+    background-image: url("images/blog.jpg"); 
+    background-size: cover;
+}
+
+#content { /* Sets the Website Content panel's background image */
+    background-image: url("images/websitecontent.jpg"); 
+    background-size: cover;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Wordsmiths section styles */
+
+.wordsmiths { /* Sets the flex container for the wordsmith pics and bios */
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255, .1)), grey;
+    background-size: cover;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+
+.smith { /* Sets the flex container for each pic and bio pair */
+    padding: 0rem 2rem 2rem 2rem;
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+@media only screen and (max-width:600px) { /* Place bios under photos on smaller screens */
+    .smith {
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+}
+
+.smith-name { /* Style for wordsmith names */
+    margin-bottom: 1rem;
+    font-size: 1.2rem; 
+    font-weight: 700;
+
+}
+
+.smith-info { /* Style for wordsmith bio panel */
+    padding: 1rem 2rem 1rem 1rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 50rem;
+    min-width:10rem;
+}
+
+.smith-pic { /* Make bio photo greyscale, set the photo height and give it a photo edge border */   
+    order: -1;
+    height: var(--photo-height);
+    filter: grayscale(100%);
+    box-shadow:
+        inset 0 -3rem 3rem rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3rem 0.3rem 1rem rgba(0,0,0,0.3);
+}
+
+/* ------------------------------------------------------------------------- */
+/* Contact section styles */
+
+.socials { /* Sets up flex container for email and social media buttons */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    height: 4rem;
+    flex-wrap: wrap;
+}
+
+.email { /* Style for div that contains email button and link */
+    text-transform: lowercase;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.email img { /* Email button placement */
+    width: 2.5rem;
+    display: inline;
+    padding-right: .5rem;
+}
+
+.email a { /* Email link style */
+    align-items: center;
+    text-decoration: none;
+    color:black;
+}
+
+.social-media-icons { /* Flex container for social media icons inside their div of the .socials flex container */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    height: 4rem;
+ 
+}
+
+/* Clickability styles for email and social media icons - makes an underline appear when hovered over to avoid modifying proprietary icons */
+.click-icon:hover, .click-icon:focus {
+    border-bottom: solid 2px black;
+    transition-duration: .5s;
+}
+
+.click-icon:active {
+    border-bottom: none;
+}
+
+.socials img { /* Set size of social media icons */
+    width: 2.5rem;
+}
+
+.socials div { /* Set spacing between social media icons */
+    padding: 0rem .5rem 0 .5rem;
+    
+}
+
+@media only screen and (max-width: 550px) { /* Realign social media icons and email to center when the social media icons div wraps to second line on a smaller screen */
+    .socials {
+        justify-content: center;
+        padding: 1rem 2rem 2rem 2rem;
+    }
+
+    .email {
+        justify-content: center;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+/* Image Credits footer section styles */
+
+.credit {
+    font-size: .75rem;
+    margin-left: 1rem;
+    padding-right: 2.5 rem;
+    color: black;
+}
+
+.credit a {
+    color:black;
+}
+
+.credit a:visited {
+    color:black;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Style for text and link on the dummy link page that index.html links to */
 .notice {    
     overflow:hidden;
     text-align:center;
     margin: 2rem 1rem 2rem 1rem;
     color: black;
     font-weight: 700;
-    font-size: 1.2rem;
-  
+    font-size: 1.2rem; 
 }
 
 .notice-text {
@@ -190,8 +397,7 @@ h3 > span:after {
     font-size: 2rem;
     margin: 7rem 4rem 2rem 4rem;
     padding: 1rem;
-    text-align:center;
-    
+    text-align:center;   
     border-radius: 10px 10px 10px 10px;   
 }    
 
@@ -203,253 +409,16 @@ h3 > span:after {
     text-decoration: none;
   }
 
-  .backlink>div {
+.backlink>div {
     height: 25vh;  
     width:400px;
     min-width: 16.25rem;
     min-height: 20rem;
     border-radius: 10px;
     margin-top: 20px;
-  
   }
 
-.mission-intro {
-    text-align: center;
-    font-size: 2em;
-    font-weight: 100;
-    padding: 3rem 0 0rem 0;
-}
-.move-anchor-up {
-    scroll-margin-top: 4.0625rem;
-}
-
-.services {
-  margin: 0 1rem 0 1rem;  
-  display: flex;
-  
-  justify-content:space-around;
-  flex-wrap: wrap;
-  padding-bottom: 1rem;
-}
-
-.services>a, .services>div{
-  height: 25vh;  
-  width:400px;
-  min-width: 16.25rem;
-  min-height: 20rem;
-  border-radius: 10px;
-  margin-top: 20px;
-  text-decoration:none;
-
-}
-
-@media screen and (max-width: 432px) {
-    .services>div {
-        height: 30vh;  
-        width:100%;
-        min-width: 260px;
-     
-      }
-
-}
-
-.services-text {
-    background: rgba(255,255,255, .9);
-    color: black;
-    font-size: 2rem;
-    margin: 2rem 2rem 0rem 2rem;
-    text-align:left;
-    padding-left: 1rem;
-    border-radius: 10px 10px 0px 0px;   
-}    
-
-.services-description {
-    border-radius: 0px 0px 10px 10px;
-    padding: 1rem 1rem 1rem 1rem;
-    color: black;
-    background: rgba(255,255,255, .9);
-    font-size: 1.2rem;
-    margin: 0rem 2rem 1rem 2rem;
-    overflow:scroll;
-}
-
-#seo {
-  background-image: url("images/seo.jpg");
-  background-size: cover;
-}
-
-#newsletter {
-    background-image: url("images/newsletter.jpg"); 
-    background-size: cover;
-}
-
-#blog {
-    background-image: url("images/blog.jpg"); 
-    background-size: cover;
-}
-
-#content {
+#backlink { /* Sets the Return to Previous Page panel's background image */
     background-image: url("images/websitecontent.jpg"); 
     background-size: cover;
 }
-
-#backlink {
-    background-image: url("images/websitecontent.jpg"); 
-    background-size: cover;
-}
-
-.wordsmiths {
-    display: flex;
-    justify-content:flex-start;
-    flex-wrap: wrap;
-    padding-bottom: 3rem;
-    margin-top: 2rem;
-    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255, .1)), grey;
-    /* filter: grayscale(75%); */
-    background-size: cover;
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-}
-
-.smith {
-    padding: 0rem 2rem 2rem 2rem;
-    display:flex;
-    flex-wrap:nowrap;
-}
-
-@media only screen and (max-width:600px) {
-    .smith {
-        flex-wrap: wrap;
-        justify-content:center;
-    }
-}
-
-.smith-name {
-    margin-bottom: 1rem;
-    font-size: 1.2rem; 
-    font-weight: 700;
-
-}
-
-.smith-info {
-    padding: 1rem 2rem 1rem 1rem;
-    display: inline-block;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    margin-top: 20px;
-    max-width: 50rem;
-    min-width:10rem;
-
-
-}
-
-.smith-pic {
-    
-    order: -1;
-    height: var(--photo-height);
-    filter: grayscale(100%);
-    box-shadow:
-        inset 0 -3rem 3rem rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3rem 0.3rem 1rem rgba(0,0,0,0.3);
-}
-
-.socials {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 2rem 0 2rem;
-    height: 4rem;
-    flex-wrap: wrap;
-}
-
-
-.email {
-    text-transform: lowercase;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-}
-
-.email img {
-    width: 2.5rem;
-    display: inline;
-    padding-right: .5rem;
-}
-
-.email a {
-    align-items: center;
-    text-decoration: none;
-    color:gray;
-
-}
-
-.social-media-icons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 2rem 0 2rem;
-    height: 4rem;
- 
-}
-
-.click-icon:hover, .click-icon:focus {
-    border-bottom: solid 2px black;
-    transition-duration: .5s;
-}
-
-.click-icon:active {
-    border-bottom: none;
-}
-
-.socials div {
-    padding: 0rem .5rem 0 .5rem;
-    
-}
-
-@media only screen and (max-width: 550px) {
-    .socials {
-        justify-content: center;
-        padding: 1rem 2rem 2rem 2rem;
-    }
-
-    .email {
-        justify-content: center;
-    }
-}
-
-
-
-.credit {
-    font-size: .75rem;
-    margin-left: 1rem;
-    padding-right: 2.5 rem;
-    color: black;
-}
-
-.credit a {
-    color:black;
- 
-}
-
-.credit a:visited {
-    color:black;
-}
-
-.email-credit {
-        font-size: 1rem;
-        color: black;
-        margin-left: 1rem;
-    }
-    
-    .email-credit a {
-        color:black;
-    }
-    
-    .email-credit a:visited {
-        color:black;
-    }
-    
-
-
-  
